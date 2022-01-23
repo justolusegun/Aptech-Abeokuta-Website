@@ -1,22 +1,13 @@
-// import React from "react";
-// import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import AptechLogo from "../images/logo.png";
-// import Menu from "../images/menu.png";
 import React, { useEffect } from "react";
 import "../Navbar.css";
 import { NavLink } from "react-router-dom";
 import $ from "jquery";
-// import { Mobile } from "../Responsive";
 
 const Image = styled.img`
   width: 200px;
   height: 50px;
-`;
-const Nav = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 `;
 
 const Navbar = () => {
@@ -59,8 +50,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <Nav className="navbar navbar-expand-lg navbar-mainbg">
-      <NavLink className="navbar-brand navbar-logo" to="/" exact>
+    <nav className="navbar navbar-expand-lg navbar-mainbg">
+      <NavLink className="navbar-brand navbar-logo" to="/" exact="true">
         <Image src={AptechLogo} alt="Aptech Logo" />
       </NavLink>
 
@@ -89,35 +80,35 @@ const Navbar = () => {
           </div>
 
           <li className="nav-item active">
-            <NavLink className="nav-link" to="/" exact>
+            <NavLink className="nav-link" to="/" exact="true">
               <i className="fas fa-tachometer-alt"></i>Home
             </NavLink>
           </li>
 
           <li className="nav-item">
-            <NavLink className="nav-link" to="/courses" exact>
+            <NavLink className="nav-link" to="/courses" exact="true">
               <i className="far fa-address-book"></i>Courses
             </NavLink>
           </li>
 
           <li className="nav-item">
-            <NavLink className="nav-link" to="/about" exact>
+            <NavLink className="nav-link" to="/about" exact="true">
               <i className="far fa-clone"></i>About
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/whyAptech" exact>
+            <NavLink className="nav-link" to="/whyAptech" exact="true">
               <i className="far fa-chart-bar"></i>Why Aptech
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/contact" exact>
+            <NavLink className="nav-link" to="/contact" exact="true">
               <i className="far fa-copy"></i>Contact Us
             </NavLink>
           </li>
         </ul>
       </div>
-    </Nav>
+    </nav>
   );
 };
 

@@ -28,7 +28,77 @@ code {
 .carousel:hover .carousel-control-next-icon {
   visibility: visible;
 }
+
+.carousel-item {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
 .carousel-caption {
-  top: 45%;
-  bottom: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 20%;
+  height: 50%;
+  border-radius: 30px;
+  border: 10px solid #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* .carousel-caption .headOne {
+} */
+/* Parallax Styles */
+
+.image {
+  position: relative;
+  height: 60vh;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 60vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.content span.img-txt {
+  color: #fff;
+  padding: 30px;
+  font-size: 18px;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .content span.img-txt {
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .carousel-control-prev {
+    height: 100px;
+    width: 100px;
+  }
+
+  .carousel-control-next {
+    height: 100px;
+    width: 100px;
+  }
+  .content span.img-txt {
+    font-size: 12px;
+  }
+}
+@media (max-width: 500px) {
+  .image {
+    height: 80vh;
+  }
+  .content {
+    height: 80vh;
+  }
+}
+@media (max-width: 380px) {
+  .carousel-caption {
+    top: 30%;
+  }
+  .carousel-caption .headOne {
+    font-size: 20px;
+  }
 }
