@@ -1,7 +1,7 @@
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
-import WhyAptech from "./Pages/Contact";
+import WhyAptech from "./Pages/WhyAptech";
 import Courses from "./Pages/Courses";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ErrorPage from "./Pages/ErrorPage";

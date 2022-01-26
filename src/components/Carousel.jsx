@@ -8,23 +8,12 @@ import "bootstrap/dist/css/bootstrap.css";
 import "../index.css";
 import styled from "styled-components";
 import { Mobile } from "../Responsive";
+import { SmallMobile } from "../Responsive2";
 
-// const Drk = styled.div`
-//   &:after {
-//     content: "";
-//     display: block;
-//     position: absolute;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     background: #000;
-//     opacity: 0.3;
-//   }
-// `;
 const H1 = styled.h1`
   font-weight: 700;
   ${Mobile({ fontWeight: "400" })}
+  ${SmallMobile({ fontSize: " 20px" })}
 `;
 
 const CarouselVideo = () => {
@@ -75,8 +64,8 @@ const CarouselVideo = () => {
               width="100%"
               height="100%"
             />
-            <Carousel.Caption>
-              <H1 className="headOne">{videoObj.desc}</H1>
+            <Carousel.Caption className="headOne">
+              <H1>{videoObj.desc}</H1>
             </Carousel.Caption>
           </Carousel.Item>
         );

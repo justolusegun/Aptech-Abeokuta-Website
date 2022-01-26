@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "../Testimonial.css";
 import { Avatar } from "@material-ui/core";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+import styled from "styled-components";
+import { SmallMobile } from "../Responsive2";
 
 const PreviousBtn = (props) => {
   console.log(props);
@@ -22,6 +24,10 @@ const NextBtn = (props) => {
     </div>
   );
 };
+
+const H3 = styled.h3`
+  ${SmallMobile({ fontSize: "18px" })}
+`;
 const Testimonial = () => {
   return (
     <div
@@ -43,15 +49,15 @@ const Testimonial = () => {
         >
           TESTIMONIALS
         </h1>
-        <h3
+        <H3
           style={{
             marginTop: 10,
             marginBottom: 50,
-            color: "#000",
+            color: "#333",
           }}
         >
           What Our Students Have To Say
-        </h3>
+        </H3>
         <Slider prevArrow={<PreviousBtn />} nextArrow={<NextBtn />} dots>
           <Card
             img=""

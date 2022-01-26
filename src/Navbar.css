@@ -5,13 +5,16 @@
 i {
   margin-right: 10px;
 }
-
 .navbar-logo {
   padding: 15px;
   pointer-events: none;
 }
 
 .navbar-mainbg {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
   background-color: #000;
   padding: 0px;
 }

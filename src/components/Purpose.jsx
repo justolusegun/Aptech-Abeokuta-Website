@@ -17,7 +17,7 @@ const Card = styled.div`
   min-width: 280px;
   height: 350px;
   position: relative;
-  box-shadow: 3px 5px 5px 5px #777;
+  box-shadow: 3px 5px 5px 3px #ccc;
   border-radius: 10px;
 `;
 const H1 = styled.h1`
@@ -44,7 +44,7 @@ const Head = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-weight: 600;
 `;
 const Body = styled.div`
@@ -60,13 +60,13 @@ const Purpose = () => {
     },
     {
       id: 2,
-      title: "APTECH'S CERTIFICATES ENJOY GLOBAL RECOGNITION",
+      title: "OUR INTERNTIONAL EDUCATION ALLIANCES",
       img: <Public fontSize="large" />,
       desc: "Aptech's courses lead to professional I.T. certifications from leading I.T brands such as Microsoft and from Aptech itself.Each course includes classroom learning as well as practical sessions in the lab.",
     },
     {
       id: 3,
-      title: "APTECH'S CERTIFICATES ENJOY GLOBAL RECOGNITION",
+      title: "APTECH MISSION",
       img: <Public fontSize="large" />,
       desc: "Aptech's courses lead to professional I.T. certifications from leading I.T brands such as Microsoft and from Aptech itself.Each course includes classroom learning as well as practical sessions in the lab.",
     },
@@ -81,7 +81,7 @@ const Purpose = () => {
           return (
             <Card key={purpose.id}>
               <Head>
-                <span Style="color: goldenrod">{purpose.img}</span>
+                <span style={{ color: "goldenrod" }}>{purpose.img}</span>
                 {purpose.title}
               </Head>
               <Body>{purpose.desc}</Body>
