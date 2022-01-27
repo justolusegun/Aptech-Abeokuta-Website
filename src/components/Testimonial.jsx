@@ -8,7 +8,6 @@ import styled from "styled-components";
 import { SmallMobile } from "../Responsive2";
 
 const PreviousBtn = (props) => {
-  console.log(props);
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>

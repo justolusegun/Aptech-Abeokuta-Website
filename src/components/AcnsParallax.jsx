@@ -3,20 +3,23 @@ import { Parallax } from "react-parallax";
 import styled from "styled-components";
 import Imgthree from "../images/imgthree.JPG";
 import { Mobile } from "../Responsive";
-// import "../index.css";
+import { SmallMobile } from "../Responsive2";
 
 const H1 = styled.h1`
   width: 100%;
   text-align: center;
-  margin: auto auto 30px auto;
+  margin: 30px auto 30px auto;
   position: relative;
   line-height: 40px;
   padding-bottom: 20px;
   ${Mobile({
-    padding: "10px",
+    padding: "15px",
     margin: "10px",
     fontSize: "30px",
     lineHeight: "30px",
+  })}
+  ${SmallMobile({
+    fontSize: "20px",
   })}
 
   &::after {
@@ -29,14 +32,11 @@ const H1 = styled.h1`
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    ${Mobile({ display: "none" })}
+    ${SmallMobile({ display: "none" })}
   }
 `;
-const P = styled.p`
-  line-height: 20px;
-  font-size: 18px;
-`;
-const ParallaxThree = () => {
+
+const AcnsParallax = () => {
   return (
     <Parallax
       bgImage={Imgthree}
@@ -47,16 +47,13 @@ const ParallaxThree = () => {
       <div className="content image2">
         <span className="img-txt">
           <H1>
-            Why <span style={{ color: "goldenrod" }}>Aptech?</span>
+            <span style={{ color: "goldenrod" }}>Aptech Certified</span> Network
+            Specialist
           </H1>
-          <P className="para">
-            Take Your Career To New Heights With Aptech Abeokuta.. Unlock Your
-            Brighest Potential
-          </P>
         </span>
       </div>
     </Parallax>
   );
 };
 
-export default ParallaxThree;
+export default AcnsParallax;
