@@ -2,7 +2,7 @@ import styled from "styled-components";
 import gradone from "../images/gradone.jpeg";
 import gradtwo from "../images/gradtwo.jpeg";
 import gradthree from "../images/gradthree.jpeg";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Container = styled.div`
   padding: 20px;
@@ -102,21 +102,33 @@ const CourseDemand = () => {
       <Container>
         {courses.map((course) => {
           return (
-            <Containertwo>
+            <Containertwo key={course.id}>
               <Image src={course.img} />
               <Info>
                 <Pad>
                   <Span>{course.desc}</Span>
                   <Span>
-                    {(course) => {
+                    {(() => {
                       if (course.id === 1) {
-                        <Button>Read More</Button>;
+                        return (
+                          <NavLink to="/courses/acns" exact="true">
+                            <Button>Read More</Button>
+                          </NavLink>
+                        );
                       } else if (course.id === 2) {
-                        <Button>Read More</Button>;
+                        return (
+                          <NavLink to="/courses/adse" exact="true">
+                            <Button>Read More</Button>
+                          </NavLink>
+                        );
                       } else if (course.id === 3) {
-                        <Button>Read More</Button>;
+                        return (
+                          <NavLink to="/courses/pro" exact="true">
+                            <Button>Read More</Button>
+                          </NavLink>
+                        );
                       }
-                    }}
+                    })()}
                   </Span>
                 </Pad>
               </Info>
