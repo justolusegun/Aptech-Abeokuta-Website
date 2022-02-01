@@ -4,6 +4,7 @@ import News from "../components/News";
 import ParallaxOne from "../components/ParallaxOne";
 import Purpose from "../components/Purpose";
 import Testimonial from "../components/Testimonial";
+// import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <ParallaxOne />
       <Testimonial />
       <News />
+      {/* <Footer /> */}
     </>
   );
 };

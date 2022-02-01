@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Fmain {
+    background-color: #1b1a1a;
+    color: white;
+    padding-top: 3em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+
+
+.logo img{
+    width: 250px;
+    height: 75px;
+    /* margin-bottom: 20px; */
+}
+.bfot{
+    text-align: center;
+    font-size: x-small;
+    color: gray;
+}
+
+.FootNav{
+    color: white;
+    text-decoration: none;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
